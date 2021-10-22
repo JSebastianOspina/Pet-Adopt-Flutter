@@ -7,8 +7,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Material App',
         initialRoute: 'loginScreen',
-        routes: {'loginScreen': (_) => LoginScreen()});
+        routes: {
+          'loginScreen': (_) => LoginScreen(),
+          'mainScreen': (_) => MainScreen(),
+          'profileScreen': (_) => ProfileScreen(),
+        });
   }
 }

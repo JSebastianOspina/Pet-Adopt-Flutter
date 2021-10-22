@@ -108,7 +108,7 @@ class LoginScreen extends StatelessWidget {
           left: 0,
           top: 0,
           child: SvgPicture.asset(
-            'assets/top-wave.svg',
+            'assets/waves/top-wave.svg',
             width: size.width,
           ),
         ),
@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
           left: 0,
           bottom: 0,
           child: SvgPicture.asset(
-            'assets/bottom-wave.svg',
+            'assets/waves/bottom-wave.svg',
             width: size.width,
           ),
         ),
@@ -144,7 +144,9 @@ class RoundedButtonWithBackground extends StatelessWidget {
             const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
         backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
       ),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, 'mainScreen');
+      },
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
